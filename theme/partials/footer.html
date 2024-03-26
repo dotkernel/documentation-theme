@@ -1,0 +1,72 @@
+<footer class="footer">
+    <div class="container">
+
+        {# Link to top #}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5>DotKernel</h5>
+                <ul>
+                    <li>DotKernel Frontend <a href="https://docs.dotkernel.com/frontend/">DotKernel web starter project suitable for frontend applications</a></li>
+                    <li>DotKernel Admin <a href="https://docs.dotkernel.com/admin/">DotKernel web starter project suitable for admin applications</a></li>
+                    <li>DotKernel API <a href="https://docs.dotkernel.com/api/">DotKernel web starter project suitable for building RESTful APIs</a></li>
+                    <li>DotKernel packages <a href="https://docs.dotkernel.com/packages/">DotKernel packages offering a wide range of tools</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+                    {# Support links #}
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">Support</h4>
+                        <ul class="support__list">
+                            <li class="support__list-item">
+                                <a href="https://twitter.com/dotkernel" class="support__link" title="X (Twitter)"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://dotkernel.slack.com" class="support__link" title="Chat"><i class="fab fa-slack"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://github.com/dotkernel" class="support__link" title="Github"><i class="fab fa-github"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="{{ config.extra.dotkernel_blog_url }}" class="support__link" title="Blog"><i class="fab fa-blog"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="{{ config.extra.dotkernel_rss_url }}" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://packagist.org/search/?q=dotkernel/" class="support__link" title="Packagist"><i class="fa fa-packagist"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {# License #}
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">License</h4>
+                        <p>
+                            Code licensed under <a
+                                href="{{ config.repo_url }}/blob/-/LICENSE.md">MIT</a>.
+                        </p>
+                    </div>
+
+                    {# Copyright #}
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">Copyright</h4>
+                        <p>
+                            &copy; {{ build_date_utc.strftime('%Y') }} <a href="{{ config.extra.dotkernel_website_url }}">DotKernel</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

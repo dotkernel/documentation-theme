@@ -1,0 +1,20 @@
+<h1>{{ config.site_name }}</h1>
+<p>{{ config.site_description }}</p>
+
+{% if config.extra.show_special_homepage %}
+    {{ page.content }}
+
+    {% if config.extra.component_list %}
+        {% include "partials/component-list.html" %}
+    {% endif %}
+{% else %}
+    <h2>Installation</h2>
+    <h3>Using Composer</h3>
+    <pre><code class="language-bash">$ composer require {% if config.extra.installation and config.extra.installation.composer_dev %}--dev {% endif %}{{ config.extra.repo_name }}</code></pre>
+{% endif %}
+
+<h2>Support</h2>
+<ul>
+    <li>Issues: <a href="{{ config.repo_url }}/issues">{{ config.repo_url|replace('https://', '') }}/issues</a></li>
+    <li>Source: <a href="{{ config.repo_url }}">{{ config.repo_url|replace('https://', '') }}</a></li>
+</ul>

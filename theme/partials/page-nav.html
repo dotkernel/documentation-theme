@@ -1,0 +1,25 @@
+<nav>
+    <ul class="page-nav hidden-print">
+        {# Previous page #}
+        <li class="page-nav__item">
+            {% if page.previous_page and not page.previous_page.title.startswith("_") %}
+                <a rel="prev" class="page-nav__link page-nav__link--prev" href="{{ page.previous_page.url|url }}">
+                    <small class="page-nav__label">Previous</small>
+                    <i class="fa fa-chevron-left"></i>
+                    {{ page.previous_page.title }}
+                </a>
+            {% endif %}
+        </li>
+
+        {# Next page #}
+        <li class="page-nav__item">
+            {% if page.next_page and not page.next_page.title.startswith("_") %}
+                <a rel="next" class="page-nav__link page-nav__link--next" href="{{ page.next_page.url|url }}">
+                    <small class="page-nav__label">Next</small>
+                    {{ page.next_page.title }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            {% endif %}
+        </li>
+    </ul>
+</nav>
