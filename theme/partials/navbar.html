@@ -25,10 +25,10 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a href="{{ config.extra.docs_frontend_url }}" class="dropdown-item">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-2 col-sm-12">
                                         <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
                                     </div>
-                                    <div class="col-md-8 col-sm-12">
+                                    <div class="col-md-10 col-sm-12">
                                         <strong>DotKernel</strong><br>
                                         DotKernel frontend application
                                     </div>
@@ -36,10 +36,10 @@
                             </a>
                             <a href="{{ config.extra.docs_admin_url }}" class="dropdown-item">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-2 col-sm-12">
                                         <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
                                     </div>
-                                    <div class="col-md-8 col-sm-12">
+                                    <div class="col-md-10 col-sm-12">
                                         <strong>Admin</strong><br>
                                         DotKernel admin application
                                     </div>
@@ -47,10 +47,10 @@
                             </a>
                             <a href="{{ config.extra.docs_api_url }}" class="dropdown-item">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-2 col-sm-12">
                                         <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
                                     </div>
-                                    <div class="col-md-8 col-sm-12">
+                                    <div class="col-md-10 col-sm-12">
                                         <strong>API</strong><br>
                                         DotKernel API
                                     </div>
@@ -58,10 +58,10 @@
                             </a>
                             <a href="{{ config.extra.docs_packages_url }}" class="dropdown-item">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-2 col-sm-12">
                                         <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
                                     </div>
-                                    <div class="col-md-8 col-sm-12">
+                                    <div class="col-md-10 col-sm-12">
                                         <strong>Packages</strong><br>
                                         DotKernel packages
                                     </div>
@@ -74,9 +74,9 @@
 
             {# Sub-navigation #}
             {% if config.site_name != 'Documentation' %}
-                <div class="d-block d-sm-none">
-                    {% include "partials/subnavigation.html" %}
-                </div>
+            <div class="d-block d-sm-none">
+                {% include "partials/subnavigation.html" %}
+            </div>
             {% endif %}
 
             {# Component selector #}
