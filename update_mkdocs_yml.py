@@ -54,15 +54,15 @@ mkdocs["theme"] = {
 mkdocs["extra"]["dotkernel_website_url"] = "https://www.dotkernel.com/"
 mkdocs["extra"]["dotkernel_blog_url"] = "https://www.dotkernel.com/blog/"
 mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
-mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.com/frontend/"
-mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.com/admin/"
-mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.com/api/"
-mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.com/packages/"
+mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
+mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin/"
+mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api/"
+mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
 
 # Remove any trailing slashes from the end of the repo_url
 mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
 mkdocs["extra"]["repo_name"] = mkdocs["repo_url"].replace("https://github.com/", "")
-mkdocs["extra"]["base_url"] = "https://docs.dotkernel.com/"
+mkdocs["extra"]["base_url"] = "https://docs.dotkernel.org/"
 
 if mkdocs["extra"]["project"] == "Frontend":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]

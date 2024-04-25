@@ -77,7 +77,7 @@ print_info "Publishing to ${GITHUB_REPOSITORY}"
 
 site_url=${INPUT_SITE_URL}
 if [[ "${site_url}" == "" ]]; then
-    site_url=https://docs.dotkernel.com/${GITHUB_REPOSITORY#*/}
+    site_url=https://docs.dotkernel.org/${GITHUB_REPOSITORY#*/}
 fi
 print_info "Using site URL ${site_url}"
 
