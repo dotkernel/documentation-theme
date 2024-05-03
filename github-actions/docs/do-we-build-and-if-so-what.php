@@ -62,7 +62,7 @@ if (! in_array($event, ['release', 'repository_dispatch', 'workflow_dispatch'], 
     exit(0); // redundant; placed here to note that skipDocs exits
 }
 
-$tags = executeApiCall($repo, 'releases', $token);
+$tags = executeApiCall($repo, 'tags', $token);
 $latestStableRelease = array_pop($tags);
 
 // Manual build request
