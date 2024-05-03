@@ -4,7 +4,7 @@
 <!--            <a href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>-->
 <!--        </h4>-->
 
-        <h5 class="subnavigation__subtitle">Table of Contents</h5>
+        <h5 class="subnavigation__title">Table of Contents</h5>
 
         <ul class="subnavigation__list">
             {% for nav_item in nav if nav_item.title != 'Home' and not nav_item.title.startswith('_') %}

@@ -4,7 +4,7 @@
     {# Skip entire table of contents if there are no headlines #}
     {% if toc_item.children|length > 0 %}
         <div class="toc">
-            <h6 class="toc__headline fw-bold">On this page</h6>
+            <h6 class="toc__headline">On this page</h6>
             <ul class="toc__list">
             {% for toc_subitem in toc_item.children %}
                 <li class="toc__entry">
