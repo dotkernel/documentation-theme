@@ -1,72 +1,86 @@
 <footer class="footer">
     <div class="container">
 
-        {# Link to top #}
         <div class="row">
-            <div class="col-md-12 text-center">
-                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-            </div>
-        </div>
+            <div class="col-md-9">
+                <div class="footer_head">
+                    <p>DotKernel</p>
+                </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <h5>DotKernel</h5>
-                <ul>
-                    <li>DotKernel Frontend <a href="{{ config.extra.docs_frontend_url }}">DotKernel web starter project suitable for frontend applications</a></li>
-                    <li>DotKernel Admin <a href="{{ config.extra.docs_admin_url }}">DotKernel web starter project suitable for admin applications</a></li>
-                    <li>DotKernel API <a href="{{ config.extra.docs_api_url }}">DotKernel web starter project suitable for building RESTful APIs</a></li>
-                    <li>DotKernel packages <a href="{{ config.extra.docs_packages_url }}">DotKernel packages offering a wide range of tools</a></li>
+                <div class="row">
+                    <div class="col-md-6 dk_widget">
+                        <p>DotKernel Frontend</p>
+                        <a href="https://docs.dotkernel.org/frontend/" target="_blank">
+                            <i class="bi bi-arrow-return-right"></i>
+                            DotKernel web starter project suitable for frontend applications
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 dk_widget">
+                        <p>DotKernel API</p>
+                        <a href="https://docs.dotkernel.org/api/" target="_blank">
+                            <i class="bi bi-arrow-return-right"></i>
+                            DotKernel web starter project suitable for building RESTful APIs
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 dk_widget">
+                        <p>DotKernel Admin</p>
+
+                        <a href="https://docs.dotkernel.org/admin/" target="_blank">
+                            <i class="bi bi-arrow-return-right"></i>
+                            DotKernel web starter project suitable for admin applications
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 dk_widget">
+                        <p>DotKernel Packages</p>
+                        <a href="https://docs.dotkernel.org/packages/" target="_blank">
+                            <i class="bi bi-arrow-return-right"></i>
+                            DotKernel packages offering a wide range of tools
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer_head">
+                    <p>Support</p>
+                </div>
+                <ul class="support__list">
+                    <li class="support__list-item">
+                        <a href="https://github.com/dotkernel" class="support__link" title="GitHub" target="_blank">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://dotkernel.slack.com" class="support__link" title="Slack" target="_blank">
+                            <i class="bi bi-slack"></i> Slack
+                        </a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://twitter.com/dotkernel" class="support__link" title="X (Twitter)" target="_blank">
+                            <i class="bi bi-twitter-x"></i> Twitter
+                        </a>
+                    </li>
+
+                    <li class="support__list-item">
+                        <a href="https://www.dotkernel.com/blog/" class="support__link" title="Blog" target="_blank">
+                            <i class="bi bi-file-post"></i> Blog
+                        </a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://www.dotkernel.com/feed/" class="support__link" title="Blog feed" target="_blank">
+                            <i class="bi bi-rss-fill"></i> Feed
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-
-                    {# Support links #}
-                    <div class="col-md-4">
-                        <h4 class="footer__headline">Support</h4>
-                        <ul class="support__list">
-                            <li class="support__list-item">
-                                <a href="https://twitter.com/dotkernel" class="support__link" title="X (Twitter)" target="_blank"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="support__list-item">
-                                <a href="https://dotkernel.slack.com" class="support__link" title="Chat" target="_blank"><i class="fab fa-slack"></i></a>
-                            </li>
-                            <li class="support__list-item">
-                                <a href="https://github.com/dotkernel" class="support__link" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                            </li>
-                            <li class="support__list-item">
-                                <a href="{{ config.extra.dotkernel_blog_url }}" class="support__link" title="Blog" target="_blank"><i class="fas fa-blog"></i></a>
-                            </li>
-                            <li class="support__list-item">
-                                <a href="{{ config.extra.dotkernel_rss_url }}" class="support__link" title="Blog feed" target="_blank"><i class="fa fa-rss"></i></a>
-                            </li>
-                            <li class="support__list-item">
-                                <a href="https://packagist.org/search/?q=dotkernel/" class="support__link" title="Packagist" target="_blank"><i class="fa fa-packagist"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {# License #}
-                    <div class="col-md-4">
-                        <h4 class="footer__headline">License</h4>
-                        <p>
-                            Code licensed under <a
-                                href="{{ config.repo_url }}/blob/-/LICENSE.md" target="_blank">MIT</a>.
-                        </p>
-                    </div>
-
-                    {# Copyright #}
-                    <div class="col-md-4">
-                        <h4 class="footer__headline">Copyright</h4>
-                        <p>
-                            &copy; {{ build_date_utc.strftime('%Y') }} <a href="{{ config.extra.dotkernel_website_url }}" target="_blank">DotKernel</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="footer_copy">
+            &#169; 2024 Dotkernel
         </div>
     </div>
 </footer>

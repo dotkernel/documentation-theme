@@ -15,7 +15,7 @@ with open("mkdocs.yml") as f:
     mkdocs = yaml.load(f, Loader=yaml.SafeLoader)
 
 mkdocs["site_url"] = site_url
-mkdocs["edit_uri"] = 'edit/master/{}/'.format(docs_dir)
+mkdocs["edit_uri"] = 'edit/main/{}/'.format(docs_dir)
 mkdocs["markdown_extensions"] = [
         {
             "markdown.extensions.codehilite": {
@@ -51,7 +51,6 @@ mkdocs["theme"] = {
         ]
     }
 
-mkdocs["extra"]["dotkernel_website_url"] = "https://www.dotkernel.com/"
 mkdocs["extra"]["dotkernel_blog_url"] = "https://www.dotkernel.com/blog/"
 mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
 mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
@@ -64,11 +63,11 @@ mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
 mkdocs["extra"]["repo_name"] = mkdocs["repo_url"].replace("https://github.com/", "")
 mkdocs["extra"]["base_url"] = "https://docs.dotkernel.org/"
 
-if mkdocs["extra"]["project"] == "Frontend":
+if mkdocs["extra"]["project"] == "DotKernel Frontend":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]
-elif mkdocs["extra"]["project"] == "Admin":
+elif mkdocs["extra"]["project"] == "DotKernel Admin":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_admin_url"]
-elif (mkdocs["extra"]["project"] == "API"):
+elif (mkdocs["extra"]["project"] == "DotKernel API"):
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
