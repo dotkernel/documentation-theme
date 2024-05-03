@@ -1,88 +1,74 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        {# Logo #}
-        <a class="logo-link navbar-brand" href="{{ config.extra.base_url }}" data-tooltip data-placement="bottom" title="Go to the DotKernel homepage">
-            <img src="{{ config.extra.base_url }}img/dk_logo_white.svg" height="28" alt="DotKernel">
-        </a>
-<!--        <a class="navbar-title" href="{{ config.extra.base_url }}" data-tooltip data-placement="bottom" title="Go to the DotKernel Documentation">-->
-<!--            Documentation-->
-<!--        </a>-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-light dk-nav py-3" data-bs-theme="light">
+    <div class="container justify-content-between">
+        <div class="dk-nav-icon d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="../img/dk_logomark_white.svg" alt="Logo" width="45" height="50" class="d-inline-block align-text-top">
+            </a>
 
-        {# Expander button #}
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="dk-nav-icon-items">
+                <span style="font-size: 12px; line-height: 13px">DotKernel Documentation</span>
+                <div class="dropdown" data-bs-theme="light">
+                    <span class="fw-bold dropdown-toggle dk-pkg-name" data-bs-toggle="dropdown" aria-expanded="false">Packages</span>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/frontend/" target="_blank" class="nav-link d-flex gap-4 align-items-center">
+                                <img src="../img/dk_logomark.svg" alt="DotKernel logo" width="45" height="50" class="d-inline-block align-text-top">
+                                <div>
+                                    <span class="fw-bold">Frontend</span>
+                                    <p>DotKernel Frontend application</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/admin/" target="_blank" class="nav-link d-flex gap-4 align-items-center">
+                                <img src="../img/dk_logomark.svg" alt="DotKernel logo" width="45" height="50" class="d-inline-block align-text-top">
+                                <div>
+                                    <span class="fw-bold">Admin</span>
+                                    <p>DotKernel Admin application</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/api/" target="_blank" class="nav-link d-flex gap-4 align-items-center">
+                                <img src="../img/dk_logomark.svg" alt="DotKernel logo" width="45" height="50" class="d-inline-block align-text-top">
+                                <div>
+                                    <span class="fw-bold">API</span>
+                                    <p>DotKernel API</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/packages/" target="_blank" class="nav-link d-flex gap-4 align-items-center">
+                                <img src="../img/dk_logomark.svg" alt="DotKernel logo" width="45" height="50" class="d-inline-block align-text-top">
+                                <div>
+                                    <span class="fw-bold">Packages</span>
+                                    <p>DotKernel packages</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            {# Main navigation #}
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <div class="dropdown sub-project-selector">
-                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
-                            All Docs
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a href="{{ config.extra.docs_frontend_url }}" class="dropdown-item">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 col-sm-12">
-                                        <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
-                                    </div>
-                                    <div class="col-md-10 col-sm-12">
-                                        <strong>DotKernel</strong><br>
-                                        DotKernel frontend application
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="{{ config.extra.docs_admin_url }}" class="dropdown-item">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 col-sm-12">
-                                        <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
-                                    </div>
-                                    <div class="col-md-10 col-sm-12">
-                                        <strong>Admin</strong><br>
-                                        DotKernel admin application
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="{{ config.extra.docs_api_url }}" class="dropdown-item">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 col-sm-12">
-                                        <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
-                                    </div>
-                                    <div class="col-md-10 col-sm-12">
-                                        <strong>API</strong><br>
-                                        DotKernel API
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="{{ config.extra.docs_packages_url }}" class="dropdown-item">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 col-sm-12">
-                                        <img src="{{ config.extra.base_url }}img/dk_logomark.svg" class="dropdown-logo">
-                                    </div>
-                                    <div class="col-md-10 col-sm-12">
-                                        <strong>Packages</strong><br>
-                                        DotKernel packages
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <a href="https://www.dotkernel.com/contact/" target="_blank" class="nav-link fw-bold text-white" aria-current="page">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-white" href="{{ config.repo_url }}" target="_blank" title="Go to {{ config.site_name }} repository">
+                        <i class="bi bi-github"></i>
+                        GitHub
+                    </a>
                 </li>
             </ul>
-
-            {# Sub-navigation #}
-            {% if config.site_name != 'Documentation' %}
-            <div class="d-block d-sm-none">
-                {% include "partials/subnavigation.html" %}
-            </div>
-            {% endif %}
-
-            {# Component selector #}
-            <div class="d-block d-sm-none">
-                {% include "partials/component-selector.html" %}
-            </div>
         </div>
     </div>
 </nav>
