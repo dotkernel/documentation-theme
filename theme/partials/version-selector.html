@@ -1,7 +1,7 @@
 {% if config.extra.current_version != Undefined and config.extra.versions|length > 1 %}
 <div class="version-selector">
     <div class="btn-group">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" id="version-selector-dropdown">
+        <button type="button" class="btn dropdown-toggle bg-light" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" id="version-selector-dropdown">
             {% if page != None and page.url != '' and page.url[:2] in config.extra.versions %}
                 {{ page.url[:2] }}
             {% else %}
