@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="{{ config.extra.base_url }}css/docs.css">
         <script src="{{ config.extra.base_url }}/js/bootstrap.js" defer></script>
         <script src="{{ config.extra.base_url }}/js/docs.js" defer></script>
-<!--        <script src="{{ config.extra.base_url }}/js/scripts.js" defer></script>-->
+        <script src="{{ config.extra.base_url }}/js/scripts.js" defer></script>
     </head>
     <body data-bs-spy="scroll" data-bs-target=".toc" data-bs-offset="100">
 
@@ -48,23 +48,22 @@
         {# Content #}
         <div class="container">
             <div class="row">
-                <div class="col-md-2 left_sidebar">
-                    {# Table of contents #}
-                    {% if not page.is_homepage or config.extra.show_special_homepage %}
-                        {% include "partials/toc.html" %}
-                    {% endif %}
-                </div>
-                <div class="col-md-8 main_docs">
-                    {% block content %}
-                    {% include "partials/content.html" %}
-                    {% endblock %}
-                </div>
-                <div class="col-md-2 right_sidebar">
+                <div class="col-md-3 right_sidebar">
                     {% if config.site_name != 'Documentation' %}
 <!--                    {% include "partials/component-selector.html" %}-->
                     {% include "partials/subnavigation.html" %}
 <!--                    {% include "partials/related-documentations.html" %}-->
                     {% endif %}
+
+                    {# Table of contents #}
+                    {% if not page.is_homepage or config.extra.show_special_homepage %}
+                    {% include "partials/toc.html" %}
+                    {% endif %}
+                </div>
+                <div class="col-md-9 main_docs">
+                    {% block content %}
+                    {% include "partials/content.html" %}
+                    {% endblock %}
                 </div>
             </div>
         </div>

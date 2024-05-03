@@ -10,7 +10,10 @@
 {% else %}
     <h2>Installation</h2>
     <h3>Using Composer</h3>
-    <pre><code class="language-bash">$ composer require {% if config.extra.installation and config.extra.installation.composer_dev %}--dev {% endif %}{{ config.extra.repo_name }}</code></pre>
+    <pre class="highlight line-numbers">
+        <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
+        <code class="language-bash">$ composer require {% if config.extra.installation and config.extra.installation.composer_dev %}--dev {% endif %}{{ config.extra.repo_name }}</code>
+    </pre>
 {% endif %}
 
 <h2>Support</h2>
