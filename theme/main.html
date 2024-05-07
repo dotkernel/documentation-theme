@@ -22,11 +22,7 @@
         {% if page.canonical_url %}
         <link rel="canonical" href="{{ page.canonical_url }}">
         {% endif %}
-        {% if config.extra.project == 'DotKernel API' %}
-        <link rel="shortcut icon" href="{{ config.extra.base_url }}img/dk_logomark_3colors.svg">
-        {% else %}
         <link rel="shortcut icon" href="{{ config.extra.base_url }}img/dk_logomark.svg">
-        {% endif %}
 
         <title>{% if page.title and page.title != 'Home' %}{{ page.title }} - {% endif %}{{ config.site_name }} - DotKernel Documentation</title>
 
