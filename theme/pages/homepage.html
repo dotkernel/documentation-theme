@@ -1,18 +1,19 @@
 <h1>{{ config.site_name }}</h1>
 <p>{{ config.site_description }}</p>
 
-{% if config.extra.show_special_homepage %}
-    {{ page.content }}
-
-    {% if config.extra.component_list %}
-        {% include "partials/component-list.html" %}
-    {% endif %}
+{% if config.extra.repo_name == 'dotkernel/api' %}
+    <h2>Installation</h2>
+    <h3>Using Git</h3>
+    <pre class="highlight line-numbers">
+        <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
+        <code class="language-bash">git clone https://github.com/dotkernel/api.git dotkernel-api</code>
+    </pre>
 {% else %}
     <h2>Installation</h2>
     <h3>Using Composer</h3>
     <pre class="highlight line-numbers">
         <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
-        <code class="language-bash">$ composer require {% if config.extra.installation and config.extra.installation.composer_dev %}--dev {% endif %}{{ config.extra.repo_name }}</code>
+        <code class="language-bash">composer require {% if config.extra.installation and config.extra.installation.composer_dev %}--dev {% endif %}{{ config.extra.repo_name }}</code>
     </pre>
 {% endif %}
 
