@@ -53,9 +53,9 @@ mkdocs["theme"] = {
 
 mkdocs["extra"]["dotkernel_blog_url"] = "https://www.dotkernel.com/blog/"
 mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
-mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
-mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin/"
 mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api/"
+mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin/"
+mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
 
 # Remove any trailing slashes from the end of the repo_url
@@ -71,6 +71,29 @@ elif (mkdocs["extra"]["project"] == "DotKernel API"):
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
+
+mkdocs["extra"]["projects"] = [
+    {
+        "name": "API",
+        "description": "DotKernel API",
+        "docs_url": mkdocs["extra"]["docs_api_url"],
+    },
+    {
+        "name": "Admin",
+        "description": "DotKernel Admin application",
+        "docs_url": mkdocs["extra"]["docs_admin_url"],
+    },
+    {
+        "name": "Frontend",
+        "description": "DotKernel Frontend application",
+        "docs_url": mkdocs["extra"]["docs_frontend_url"],
+    },
+    {
+        "name": "Packages",
+        "description": "DotKernel packages",
+        "docs_url": mkdocs["extra"]["docs_packages_url"],
+    },
+]
 
 # If plugins are set, check if search exists
 # https://www.mkdocs.org/user-guide/configuration/#plugins
