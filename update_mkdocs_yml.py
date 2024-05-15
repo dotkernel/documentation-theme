@@ -53,7 +53,7 @@ mkdocs["theme"] = {
 
 mkdocs["extra"]["dotkernel_blog_url"] = "https://www.dotkernel.com/blog/"
 mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
-mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api/"
+mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api-documentation/"
 mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin/"
 mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
