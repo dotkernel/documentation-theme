@@ -1,14 +1,21 @@
 {% if not nav_item.children %}
-    <li class="subnavigation__list-item {% if nav_item.active %}subnavigation__list-item--active{% endif %}">
-        <a href="{{ nav_item.url|url }}" class="subnavigation__link">{{ nav_item.title }}</a>
-    </li>
+<li class="subnavigation__list-item {% if nav_item.active %}subnavigation__list-item--active{% endif %}">
+    <a href="{{ nav_item.url|url }}" class="subnavigation__link">{{ nav_item.title }}</a>
+</li>
 {% else %}
-    <li class="subnavigation__list-item">
+{% set characters = [] %}
+{% for c in nav_item.title|lower|replace(" ", "-") %}
+{% if (c.isalnum() or c == '-') and characters.append(c) %}{% endif %}
+{% endfor %}
+{% set item_id = "".join(characters) %}
+<li class="subnavigation__list-item">
+    <a data-bs-toggle="collapse" href="#{{ item_id }}" role="button" aria-expanded="false" aria-controls="{{ item_id }}">
         <span class="subnavigation__headline">{{ nav_item.title }}</span>
-        <ul class="subnavigation__list">
-            {% for nav_item in nav_item.children if not nav_item.title.startswith('_') %}
-                {% include "partials/subnavigation-sub.html" %}
-            {% endfor %}
-        </ul>
-    </li>
+    </a>
+    <ul class="subnavigation__list collapse" id="{{ item_id }}">
+        {% for nav_item in nav_item.children if not nav_item.title.startswith('_') %}
+        {% include "partials/subnavigation-sub.html" %}
+        {% endfor %}
+    </ul>
+</li>
 {% endif %}
