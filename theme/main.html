@@ -69,6 +69,14 @@
             let base_url = '{{ base_url }}',
                 project  = "{{ config.extra.project|lower|replace(' ', '-') }}",
                 siteName = '{{ config.site_name }}';
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelectorAll('.subnavigation__link').forEach(function(link) {
+                        if (link.getAttribute('href') === './') {
+                            link.parentNode.parentNode.classList.add('show');
+                        }
+                    });
+                });
         </script>
 <!--        {# Search modal #}-->
 <!--        {% include "partials/search-modal.html" %}-->
