@@ -57,6 +57,7 @@ mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api-documentation/
 mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin/"
 mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
+mkdocs["extra"]["development_packages_url"] = "https://docs.dotkernel.org/development/"
 
 # Remove any trailing slashes from the end of the repo_url
 mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
@@ -71,6 +72,8 @@ elif (mkdocs["extra"]["project"] == "DotKernel API"):
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
+elif mkdocs["extra"]["project"] == "Development":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["development_packages_url"]
 
 mkdocs["extra"]["projects"] = [
     {
@@ -92,6 +95,11 @@ mkdocs["extra"]["projects"] = [
         "name": "Packages",
         "description": "DotKernel packages",
         "docs_url": mkdocs["extra"]["docs_packages_url"],
+    },
+    {
+        "name": "Development",
+        "description": "WSL2 Development Environment",
+        "docs_url": mkdocs["extra"]["development_packages_url"],
     },
 ]
 
