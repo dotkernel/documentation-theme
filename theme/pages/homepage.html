@@ -1,21 +1,42 @@
-<h1>{{ config.site_name }}</h1>
-<p>{{ config.site_description }}</p>
-
 {% if config.extra.repo_name == 'dotkernel/api' %}
+    <h1>Dotkernel API</h1>
+    <p>{{ config.site_description }}</p>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
         <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
         <code class="language-bash">git clone https://github.com/dotkernel/api.git dotkernel-api</code>
     </pre>
-{% elif config.extra.repo_name == 'dotkernel/development' %}
+{% elif config.extra.repo_name == 'dotkernel/frontend' %}
+    <h1>Dotkernel Frontend</h1>
+    <p>{{ config.site_description }}</p>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
         <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
-        <code class="language-bash">git clone https://github.com/dotkernel/development.git dotkernel-development</code>
+        <code class="language-bash">git clone https://github.com/dotkernel/frontend.git dotkernel-frontend</code>
+    </pre>
+{% elif config.extra.repo_name == 'dotkernel/admin' %}
+    <h1>Dotkernel Admin</h1>
+    <p>{{ config.site_description }}</p>
+    <h2>Installation</h2>
+    <h3>Using Git</h3>
+    <pre class="highlight line-numbers">
+        <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
+        <code class="language-bash">git clone https://github.com/dotkernel/admin.git dotkernel-admin</code>
+    </pre>
+{% elif config.extra.repo_name == 'dotkernel/development' %}
+    <h1>Development</h1>
+    <p>{{ config.site_description }}</p>
+    <h2>Installation</h2>
+    <h3>Using Git</h3>
+    <pre class="highlight line-numbers">
+        <i class="bi bi-copy copy_btn" onclick="copy(this)"></i>
+        <code class="language-bash">git clone https://github.com/dotkernel/development.git</code>
     </pre>
 {% else %}
+    <h1>{{ config.site_name }}</h1>
+    <p>{{ config.site_description }}</p>
     <h2>Installation</h2>
     <h3>Using Composer</h3>
     <pre class="highlight line-numbers">
