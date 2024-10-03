@@ -56,24 +56,27 @@ mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
 mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api-documentation/"
 mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin-documentation/"
 mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend-documentation/"
+mkdocs["extra"]["docs_light_url"] = "https://docs.dotkernel.org/light-documentation/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
-mkdocs["extra"]["development_packages_url"] = "https://docs.dotkernel.org/development/"
+mkdocs["extra"]["docs_development_url"] = "https://docs.dotkernel.org/development/"
 
 # Remove any trailing slashes from the end of the repo_url
 mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
 mkdocs["extra"]["repo_name"] = mkdocs["repo_url"].replace("https://github.com/", "")
 mkdocs["extra"]["base_url"] = "https://docs.dotkernel.org/"
 
-if mkdocs["extra"]["project"] == "DotKernel Frontend":
-    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]
+if mkdocs["extra"]["project"] == "DotKernel API":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
 elif mkdocs["extra"]["project"] == "DotKernel Admin":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_admin_url"]
-elif (mkdocs["extra"]["project"] == "DotKernel API"):
-    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
+elif mkdocs["extra"]["project"] == "DotKernel Frontend":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]
+elif mkdocs["extra"]["project"] == "DotKernel Light":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_light_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
 elif mkdocs["extra"]["project"] == "Development":
-    mkdocs["extra"]["project_url"] = mkdocs["extra"]["development_packages_url"]
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_development_url"]
 
 mkdocs["extra"]["projects"] = [
     {
@@ -92,6 +95,11 @@ mkdocs["extra"]["projects"] = [
         "docs_url": mkdocs["extra"]["docs_frontend_url"],
     },
     {
+        "name": "Light",
+        "description": "DotKernel Light application",
+        "docs_url": mkdocs["extra"]["docs_light_url"],
+    },
+    {
         "name": "Packages",
         "description": "DotKernel packages",
         "docs_url": mkdocs["extra"]["docs_packages_url"],
@@ -99,7 +107,7 @@ mkdocs["extra"]["projects"] = [
     {
         "name": "Development",
         "description": "WSL2 Development Environment",
-        "docs_url": mkdocs["extra"]["development_packages_url"],
+        "docs_url": mkdocs["extra"]["docs_development_url"],
     },
 ]
 
