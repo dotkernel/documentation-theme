@@ -1,6 +1,43 @@
 {% if config.extra.repo_name == 'dotkernel/api' %}
     <h1>Dotkernel API</h1>
-    <p>{{ config.site_description }}</p>
+    <h2>Features</h2>
+    <div style="display: flex;gap: 30px;flex-wrap: wrap;">
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px;">
+                <img style="background: #E4EDFF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/cycle.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/container/intro/" target="_blank" rel="noopener">Containers</a></h3>
+            </div>
+            Dotkernel is built around the PSR-11 dependency container. We have chosen <strong><a href="https://github.com/laminas/laminas-servicemanager">Laminas Service Manager</a></strong> as our default implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #E5F6E3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/migrate.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/template/intro/" target="_blank" rel="noopener">Templating</a></h3>
+            </div>
+            By default, no middleware in Mezzio is templated. We use <strong><a href="http://twig.sensiolabs.org/documentation">Twig</a></strong> as the default templating engine.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FDD3D3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/jump.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/router/intro/" target="_blank" rel="noopener">Routers</a></h3>
+            </div>
+            There are various routing implementations compatible with Expressive. We have chosen <strong><a href="https://github.com/nikic/FastRoute">FastRoute</a></strong> as Dotkernel’s default routing library.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #DDD1FF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/notepad.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://github.com/laminas/laminas-diactoros" target="_blank" rel="noopener">Http messages</a></h3>
+            </div>
+            Mezzio, and consequently Dotkernel, is built around <strong><a href="https://github.com/php-fig/http-message">PSR-7</a></strong>. It uses <strong><a href="https://github.com/laminas/laminas-diactoros">Laminas Diactoros</a></strong> as the PSR-7 implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FFEDD8;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/integration.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/getting-started.html" target="_blank" rel="noopener">Database and object mapping</a></h3>
+            </div>
+            The Doctrine Project’s PHP libraries are at the core of our database storage and object mapping. We use Doctrine's <strong><a href="https://www.doctrine-project.org/projects/dbal.html">Database Abstraction Layer</a></strong> and <strong><a href="https://www.doctrine-project.org/projects/orm.html">Object Relational Mapper</a></strong>.
+        </div>
+    </div>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
@@ -9,7 +46,44 @@
     </pre>
 {% elif config.extra.repo_name == 'dotkernel/admin' %}
     <h1>Dotkernel Admin</h1>
-    <p>{{ config.site_description }}</p>
+    <h2>Features</h2>
+    <div style="display: flex;gap: 30px;flex-wrap: wrap;">
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px;">
+                <img style="background: #E4EDFF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/cycle.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/container/intro/" target="_blank" rel="noopener">Containers</a></h3>
+            </div>
+            Dotkernel is built around the PSR-11 dependency container. We have chosen <strong><a href="https://github.com/laminas/laminas-servicemanager">Laminas Service Manager</a></strong> as our default implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #E5F6E3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/migrate.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/template/intro/" target="_blank" rel="noopener">Templating</a></h3>
+            </div>
+            By default, no middleware in Mezzio is templated. We use <strong><a href="http://twig.sensiolabs.org/documentation">Twig</a></strong> as the default templating engine.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FDD3D3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/jump.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/router/intro/" target="_blank" rel="noopener">Routers</a></h3>
+            </div>
+            There are various routing implementations compatible with Expressive. We have chosen <strong><a href="https://github.com/nikic/FastRoute">FastRoute</a></strong> as Dotkernel’s default routing library.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #DDD1FF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/notepad.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://github.com/laminas/laminas-diactoros" target="_blank" rel="noopener">Http messages</a></h3>
+            </div>
+            Mezzio, and consequently Dotkernel, is built around <strong><a href="https://github.com/php-fig/http-message">PSR-7</a></strong>. It uses <strong><a href="https://github.com/laminas/laminas-diactoros">Laminas Diactoros</a></strong> as the PSR-7 implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FFEDD8;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/integration.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/getting-started.html" target="_blank" rel="noopener">Database and object mapping</a></h3>
+            </div>
+            The Doctrine Project’s PHP libraries are at the core of our database storage and object mapping. We use Doctrine's <strong><a href="https://www.doctrine-project.org/projects/dbal.html">Database Abstraction Layer</a></strong> and <strong><a href="https://www.doctrine-project.org/projects/orm.html">Object Relational Mapper</a></strong>.
+        </div>
+    </div>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
@@ -18,7 +92,44 @@
     </pre>
 {% elif config.extra.repo_name == 'dotkernel/frontend' %}
     <h1>Dotkernel Frontend</h1>
-    <p>{{ config.site_description }}</p>
+    <h2>Features</h2>
+    <div style="display: flex;gap: 30px;flex-wrap: wrap;">
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px;">
+                <img style="background: #E4EDFF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/cycle.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/container/intro/" target="_blank" rel="noopener">Containers</a></h3>
+            </div>
+            Dotkernel is built around the PSR-11 dependency container. We have chosen <strong><a href="https://github.com/laminas/laminas-servicemanager">Laminas Service Manager</a></strong> as our default implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #E5F6E3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/migrate.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/template/intro/" target="_blank" rel="noopener">Templating</a></h3>
+            </div>
+            By default, no middleware in Mezzio is templated. We use <strong><a href="http://twig.sensiolabs.org/documentation">Twig</a></strong> as the default templating engine.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FDD3D3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/jump.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/router/intro/" target="_blank" rel="noopener">Routers</a></h3>
+            </div>
+            There are various routing implementations compatible with Expressive. We have chosen <strong><a href="https://github.com/nikic/FastRoute">FastRoute</a></strong> as Dotkernel’s default routing library.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #DDD1FF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/notepad.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://github.com/laminas/laminas-diactoros" target="_blank" rel="noopener">Http messages</a></h3>
+            </div>
+            Mezzio, and consequently Dotkernel, is built around <strong><a href="https://github.com/php-fig/http-message">PSR-7</a></strong>. It uses <strong><a href="https://github.com/laminas/laminas-diactoros">Laminas Diactoros</a></strong> as the PSR-7 implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FFEDD8;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/integration.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/getting-started.html" target="_blank" rel="noopener">Database and object mapping</a></h3>
+            </div>
+            The Doctrine Project’s PHP libraries are at the core of our database storage and object mapping. We use Doctrine's <strong><a href="https://www.doctrine-project.org/projects/dbal.html">Database Abstraction Layer</a></strong> and <strong><a href="https://www.doctrine-project.org/projects/orm.html">Object Relational Mapper</a></strong>.
+        </div>
+    </div>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
@@ -27,7 +138,37 @@
     </pre>
 {% elif config.extra.repo_name == 'dotkernel/light' %}
     <h1>Dotkernel Light</h1>
-    <p>{{ config.site_description }}</p>
+    <h2>Features</h2>
+    <div style="display: flex;gap: 30px;flex-wrap: wrap;">
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px;">
+                <img style="background: #E4EDFF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/cycle.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/container/intro/" target="_blank" rel="noopener">Containers</a></h3>
+            </div>
+            Dotkernel is built around the PSR-11 dependency container. We have chosen <strong><a href="https://github.com/laminas/laminas-servicemanager">Laminas Service Manager</a></strong> as our default implementation.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #E5F6E3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/migrate.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/template/intro/" target="_blank" rel="noopener">Templating</a></h3>
+            </div>
+            By default, no middleware in Mezzio is templated. We use <strong><a href="http://twig.sensiolabs.org/documentation">Twig</a></strong> as the default templating engine.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #FDD3D3;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/jump.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://docs.mezzio.dev/mezzio/v3/features/router/intro/" target="_blank" rel="noopener">Routers</a></h3>
+            </div>
+            There are various routing implementations compatible with Expressive. We have chosen <strong><a href="https://github.com/nikic/FastRoute">FastRoute</a></strong> as Dotkernel’s default routing library.
+        </div>
+        <div style="width:300px">
+            <div style="display: flex;gap:25px;height:70px;margin-bottom:20px">
+                <img style="background: #DDD1FF;padding:10px;border-radius:10px" src="https://www.dotkernel.org/images/app/icon/notepad.svg">
+                <h3 style="padding-top:0;margin-top:0;"><a href="https://github.com/laminas/laminas-diactoros" target="_blank" rel="noopener">Http messages</a></h3>
+            </div>
+            Mezzio, and consequently Dotkernel, is built around <strong><a href="https://github.com/php-fig/http-message">PSR-7</a></strong>. It uses <strong><a href="https://github.com/laminas/laminas-diactoros">Laminas Diactoros</a></strong> as the PSR-7 implementation.
+        </div>
+    </div>
     <h2>Installation</h2>
     <h3>Using Git</h3>
     <pre class="highlight line-numbers">
