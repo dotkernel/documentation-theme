@@ -2,12 +2,12 @@
     <div class="container justify-content-between">
         <div class="dk-nav-icon d-flex align-items-center">
             <a class="navbar-brand" href="https://docs.dotkernel.org/">
-                <img alt="DotKernel Logo" class="d-inline-block align-text-top" height="50"
+                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50"
                      src="{{ config.extra.base_url }}/img/dk_logomark_white.svg" width="45"/>
             </a>
 
             <div class="dk-nav-icon-items">
-                <span style="font-size: 12px; line-height: 13px">DotKernel Documentation</span>
+                <span style="font-size: 12px; line-height: 13px">Dotkernel Documentation</span>
 
                 <div class="dropdown" data-bs-theme="light">
                     <span class="fw-bold dropdown-toggle dk-pkg-name" data-bs-toggle="dropdown" aria-expanded="false">{{ config.extra.project }}</span>
@@ -15,7 +15,7 @@
                         {% for project in config.extra.projects %}
                         <li class="dropdown-item {{ 'bg-light' if config.extra.project == project.name }}">
                             <a href="{{ project.docs_url }}" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="DotKernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
+                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
                                 <div>
                                     <span class="fw-bold d-block">{{ project.name }}</span>
                                     <span>{{ project.description }}</span>

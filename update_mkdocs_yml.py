@@ -65,13 +65,13 @@ mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
 mkdocs["extra"]["repo_name"] = mkdocs["repo_url"].replace("https://github.com/", "")
 mkdocs["extra"]["base_url"] = "https://docs.dotkernel.org/"
 
-if mkdocs["extra"]["project"] == "DotKernel API":
+if mkdocs["extra"]["project"] == "API":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_api_url"]
-elif mkdocs["extra"]["project"] == "DotKernel Admin":
+elif mkdocs["extra"]["project"] == "Admin":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_admin_url"]
-elif mkdocs["extra"]["project"] == "DotKernel Frontend":
+elif mkdocs["extra"]["project"] == "Frontend":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]
-elif mkdocs["extra"]["project"] == "DotKernel Light":
+elif mkdocs["extra"]["project"] == "Light":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_light_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
@@ -81,27 +81,27 @@ elif mkdocs["extra"]["project"] == "Development":
 mkdocs["extra"]["projects"] = [
     {
         "name": "API",
-        "description": "DotKernel API",
+        "description": "Dotkernel API",
         "docs_url": mkdocs["extra"]["docs_api_url"],
     },
     {
         "name": "Admin",
-        "description": "DotKernel Admin application",
+        "description": "Dotkernel Admin",
         "docs_url": mkdocs["extra"]["docs_admin_url"],
     },
     {
         "name": "Frontend",
-        "description": "DotKernel Frontend application",
+        "description": "Dotkernel Frontend",
         "docs_url": mkdocs["extra"]["docs_frontend_url"],
     },
     {
         "name": "Light",
-        "description": "DotKernel Light application",
+        "description": "Dotkernel Light",
         "docs_url": mkdocs["extra"]["docs_light_url"],
     },
     {
         "name": "Packages",
-        "description": "DotKernel packages",
+        "description": "Dotkernel packages",
         "docs_url": mkdocs["extra"]["docs_packages_url"],
     },
     {

@@ -1,6 +1,6 @@
-# DotKernel GitHub Actions: docs
+# Dotkernel GitHub Actions: docs
 
-This action can be used to build and deploy documentation for a DotKernel repository.
+This action can be used to build and deploy documentation for a Dotkernel repository.
 
 The action makes several assumptions:
 
