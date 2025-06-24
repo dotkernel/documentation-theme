@@ -51,6 +51,7 @@ mkdocs["theme"] = {
         ]
     }
 
+mkdocs["extra"]["dotkernel_discussions_url"] = "https://github.com/orgs/dotkernel/discussions"
 mkdocs["extra"]["dotkernel_blog_url"] = "https://www.dotkernel.com/blog/"
 mkdocs["extra"]["dotkernel_rss_url"] = "https://www.dotkernel.com/feed/"
 mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api-documentation/"
@@ -110,6 +111,14 @@ mkdocs["extra"]["projects"] = [
         "docs_url": mkdocs["extra"]["docs_development_url"],
     },
 ]
+
+mkdocs["extra"].setdefault("development", {})
+mkdocs["extra"]["development"].setdefault("versions", [])
+mkdocs["extra"]["development"].setdefault("version_mapping", {})
+
+mkdocs["extra"]["development"]["versions"] = ["v1", "v2"]
+mkdocs["extra"]["development"]["version_mapping"]["v1"] = "AlmaLinux 9"
+mkdocs["extra"]["development"]["version_mapping"]["v2"] = "AlmaLinux 10"
 
 # If plugins are set, check if search exists
 # https://www.mkdocs.org/user-guide/configuration/#plugins
