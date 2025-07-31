@@ -58,6 +58,7 @@ mkdocs["extra"]["docs_api_url"] = "https://docs.dotkernel.org/api-documentation/
 mkdocs["extra"]["docs_admin_url"] = "https://docs.dotkernel.org/admin-documentation/"
 mkdocs["extra"]["docs_frontend_url"] = "https://docs.dotkernel.org/frontend-documentation/"
 mkdocs["extra"]["docs_light_url"] = "https://docs.dotkernel.org/light-documentation/"
+mkdocs["extra"]["docs_queue_url"] = "https://docs.dotkernel.org/queue-documentation/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
 mkdocs["extra"]["docs_development_url"] = "https://docs.dotkernel.org/development/"
 
@@ -74,6 +75,8 @@ elif mkdocs["extra"]["project"] == "Frontend":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_frontend_url"]
 elif mkdocs["extra"]["project"] == "Light":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_light_url"]
+elif mkdocs["extra"]["project"] == "Queue":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_queue_url"]
 elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
 elif mkdocs["extra"]["project"] == "Development":
@@ -99,6 +102,11 @@ mkdocs["extra"]["projects"] = [
         "name": "Light",
         "description": "Dotkernel Light",
         "docs_url": mkdocs["extra"]["docs_light_url"],
+    },
+    {
+        "name": "Queue",
+        "description": "Dotkernel Queue",
+        "docs_url": mkdocs["extra"]["docs_queue_url"],
     },
     {
         "name": "Packages",
