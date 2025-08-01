@@ -61,6 +61,7 @@ mkdocs["extra"]["docs_light_url"] = "https://docs.dotkernel.org/light-documentat
 mkdocs["extra"]["docs_queue_url"] = "https://docs.dotkernel.org/queue-documentation/"
 mkdocs["extra"]["docs_packages_url"] = "https://docs.dotkernel.org/packages/"
 mkdocs["extra"]["docs_development_url"] = "https://docs.dotkernel.org/development/"
+mkdocs["extra"]["docs_headless_url"] = "https://docs.dotkernel.org/headless-documentation/"
 
 # Remove any trailing slashes from the end of the repo_url
 mkdocs["repo_url"] = mkdocs["repo_url"].rstrip("/")
@@ -81,6 +82,8 @@ elif mkdocs["extra"]["project"] == "Packages":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_packages_url"]
 elif mkdocs["extra"]["project"] == "Development":
     mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_development_url"]
+elif mkdocs["extra"]["project"] == "Headless Platform":
+    mkdocs["extra"]["project_url"] = mkdocs["extra"]["docs_headless_url"]
 
 mkdocs["extra"]["projects"] = [
     {
@@ -117,6 +120,11 @@ mkdocs["extra"]["projects"] = [
         "name": "Development",
         "description": "WSL2 Development Environment",
         "docs_url": mkdocs["extra"]["docs_development_url"],
+    },
+    {
+        "name": "Headless Platform",
+        "description": "Dotkernel Headless Platform",
+        "docs_url": mkdocs["extra"]["docs_headless_url"],
     },
 ]
 
