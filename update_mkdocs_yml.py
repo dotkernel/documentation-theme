@@ -118,7 +118,7 @@ mkdocs["extra"]["projects"] = [
     },
     {
         "name": "Development",
-        "description": "WSL2 Development Environment",
+        "description": "Development Environment using AlmaLinux",
         "docs_url": mkdocs["extra"]["docs_development_url"],
     },
     {
