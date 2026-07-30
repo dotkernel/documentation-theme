@@ -82,3 +82,10 @@ php ${SCRIPT_PATH}/table_fix_pipes.php ${DOC_DIR}
 # Escape tags in search data
 echo "Escaping tags in search data"
 php ${SCRIPT_PATH}/escape_search_data.php ${DOC_DIR}/html/search/search_index.json
+
+# Publish the Markdown sources alongside the generated pages
+echo "Copying Markdown sources"
+php ${SCRIPT_PATH}/copy_markdown.php ${DOC_DIR}
+
+# Serve the site as-is, so GitHub Pages does not run the .md files through Jekyll
+touch ${DOC_DIR}/html/.nojekyll
