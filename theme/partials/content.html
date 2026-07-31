@@ -24,11 +24,22 @@
 <!--        <h2 class="chapter__headline text-black-50">{{ page.parent.title }}</h2>-->
     {% endif %}
 
+    {# Link to the Markdown source, published next to this page by copy_markdown.php #}
+    {% if page.file and page.file.src_uri %}
+        <p class="view-as-markdown text-end small mb-2">
+            <a href="{{ page.file.src_uri|url }}" class="text-body-secondary text-decoration-none"
+               type="text/markdown" rel="alternate" title="View the Markdown source of this page">
+                <i class="bi bi-filetype-md"></i>
+                View as Markdown
+            </a>
+        </p>
+    {% endif %}
+
     {{ page.content }}
 {% endif %}
 
 {# Pager #}
-{% if page.previous_page or page.next_page  %}
+{% if page.previous_page or page.next_page %}
     {% include "partials/page-nav.html" %}
 {% endif %}
 
