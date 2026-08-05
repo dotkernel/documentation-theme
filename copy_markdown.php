@@ -3,8 +3,8 @@
  * Copies the source Markdown files into the generated site, so every page is
  * also available in its original Markdown form.
  *
- * `doc/book/v7/introduction/introduction.md` is copied to
- * `doc/html/v7/introduction/introduction.md`, making it available as
+ * `docs/book/v7/introduction/introduction.md` is copied to
+ * `docs/html/v7/introduction/introduction.md`, making it available as
  * `<site_url>/v7/introduction/introduction.md`, next to the generated
  * `<site_url>/v7/introduction/introduction/` page.
  *
@@ -12,7 +12,7 @@
  * directory.
  */
 
-$docPath = isset($argv[1]) ? $argv[1] : 'doc';
+$docPath = $argv[1] ?? 'docs';
 $docPath = sprintf('%s/%s', getcwd(), $docPath);
 $docPath = realpath($docPath);
 
