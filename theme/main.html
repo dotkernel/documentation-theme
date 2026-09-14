@@ -26,6 +26,10 @@
 
         <title>{% if page.title and page.title != 'Home' %}{{ page.title }} - {% endif %}{{ config.site_name }} - Dotkernel Documentation</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ config.extra.base_url }}css/bootstrap.css">
         <link rel="stylesheet" href="{{ config.extra.base_url }}css/bootstrap-icons.min.css">
         <link rel="stylesheet" href="{{ config.extra.base_url }}css/docs.css">
@@ -38,27 +42,29 @@
         {# Navigation #}
         {% include "partials/navbar.html" %}
 
-        {# Breadcrumbs #}
-        {% include "partials/breadcrumb.html" %}
-
         {# Content #}
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 right_sidebar">
+        <div class="container-fluid docs-shell">
+            <div class="row gx-0">
+                <div class="col-lg-3 col-xl-2 right_sidebar">
                     {% if config.site_name != 'Documentation' %}
                     {% include "partials/subnavigation.html" %}
                     {% endif %}
-
-                    {# Table of contents #}
-                    {% if not page.is_homepage or config.extra.show_special_homepage %}
-                    {% include "partials/toc.html" %}
-                    {% endif %}
                 </div>
-                <div class="col-lg-9 main_docs">
+                <div class="col-lg-9 col-xl-8 main_docs">
+                    {# Breadcrumbs #}
+                    {% include "partials/breadcrumb.html" %}
+
                     {% block content %}
                     {% include "partials/content.html" %}
                     {% endblock %}
                 </div>
+
+                {# Table of contents #}
+                {% if not page.is_homepage or config.extra.show_special_homepage %}
+                <div class="col-xl-2 d-none d-xl-block page_toc">
+                    {% include "partials/toc.html" %}
+                </div>
+                {% endif %}
             </div>
         </div>
 
@@ -78,8 +84,8 @@
                     });
                 });
         </script>
-<!--        {# Search modal #}-->
-<!--        {% include "partials/search-modal.html" %}-->
+        {# Search modal #}
+        {% include "partials/search-modal.html" %}
     </body>
 </html>
 {% if page and page.is_homepage %}
