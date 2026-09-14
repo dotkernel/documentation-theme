@@ -1,42 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary bg-light dk-nav py-3" data-bs-theme="light">
-    <div class="container justify-content-between">
-        <div class="dk-nav-icon d-flex align-items-center">
-            <a class="navbar-brand" href="https://docs.dotkernel.org/">
-                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50"
-                     src="{{ config.extra.base_url }}/img/dk_logomark_white.svg" width="45"/>
-            </a>
+<nav class="navbar navbar-expand-lg dk-docs-nav py-2" data-bs-theme="dark">
+    <div class="container-fluid dk-docs-nav__inner">
+        <a class="navbar-brand dk-docs-nav__brand" href="https://docs.dotkernel.org/">
+            <img alt="Dotkernel" class="d-inline-block align-text-top" height="28"
+                 src="{{ config.extra.base_url }}img/dk_logo_2024_white.svg" width="152"/>
+        </a>
 
-            <div class="dk-nav-icon-items">
-                <span style="font-size: 12px; line-height: 13px">Dotkernel Documentation</span>
+        <ul class="dk-docs-nav__projects list-unstyled d-none d-lg-flex align-items-center mb-0">
+            {% for project in config.extra.projects %}
+            <li class="{{ 'dk-docs-nav__projects-item--active' if config.extra.project == project.name }}">
+                <a href="{{ project.docs_url }}">{{ project.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
 
-                <div class="dropdown" data-bs-theme="light">
-                    <span class="fw-bold dropdown-toggle dk-pkg-name" data-bs-toggle="dropdown" aria-expanded="false">{{ config.extra.project }}</span>
-                    <ul class="dropdown-menu">
-                        {% for project in config.extra.projects %}
-                        <li class="dropdown-item {{ 'bg-dark-subtle' if config.extra.project == project.name }}">
-                            <a href="{{ project.docs_url }}" class="nav-link d-flex gap-4 align-items-center">
-                                <i class="bi bi-arrow-return-right text-primary"></i>
-                                <div class="py-1">
-                                    <span class="fw-bold d-block">{{ project.name }}</span>
-                                </div>
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="flex-grow-1"></div>
+
+        <a href="#" class="dk-docs-nav__search d-none d-md-flex align-items-center" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal" title="Open search">
+            <i class="bi bi-search"></i>
+            <span>Search docs</span>
+            <span class="dk-docs-nav__search-key">/</span>
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 dk-docs-nav__projects dk-docs-nav__projects--collapsed d-lg-none">
+                {% for project in config.extra.projects %}
+                <li class="{{ 'dk-docs-nav__projects-item--active' if config.extra.project == project.name }}">
+                    <a href="{{ project.docs_url }}">{{ project.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<!--                <li class="nav-item">-->
-<!--                    <a href="#" class="nav-link fw-bold text-white" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal" title="Open search">-->
-<!--                        <i class="bi bi-search"></i> Search-->
-<!--                    </a>-->
-<!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link fw-bold text-white" href="{{ config.repo_url }}" title="Go to {{ config.site_name }} repository" target="_blank">
                         <i class="bi bi-github"></i>
