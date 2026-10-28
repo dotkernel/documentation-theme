@@ -9,10 +9,10 @@
 {% endfor %}
 {% set item_id = "".join(characters) %}
 <li class="subnavigation__list-item">
-    <a data-bs-toggle="collapse" href="#{{ item_id }}" role="button" aria-expanded="false" aria-controls="{{ item_id }}">
+    <a data-bs-toggle="collapse" href="#{{ item_id }}" role="button" class="{% if not nav_item.active %}collapsed{% endif %}" aria-expanded="{{ 'true' if nav_item.active else 'false' }}" aria-controls="{{ item_id }}">
         <span class="subnavigation__headline">{{ nav_item.title }}</span>
     </a>
-    <ul class="subnavigation__list collapse" id="{{ item_id }}">
+    <ul class="subnavigation__list collapse{% if nav_item.active %} show{% endif %}" id="{{ item_id }}">
         {% for nav_item in nav_item.children if not nav_item.title.startswith('_') %}
         {% include "partials/subnavigation-sub.html" %}
         {% endfor %}
